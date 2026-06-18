@@ -4,6 +4,8 @@
 
 This documentation site tells **one academic project story** in chronological order — not two parallel products.
 
+**Published site:** [https://bulletproof20.github.io/RadarLink/](https://bulletproof20.github.io/RadarLink/) · **Repository entry point:** [README.md](https://github.com/bulletproof20/RadarLink/blob/main/README.md)
+
 ## How to read this site
 
 | Section | Purpose |
@@ -25,4 +27,4 @@ docs/                      Narrative documentation (this site)
 
 ## Author
 
-Ivo Filipe Carvalho de Sá — IPCA, EIM, Estruturas de Dados e Algoritmos (EAD).
+Ivo Sá — IPCA, EIM, Estruturas de Dados e Algoritmos (EAD).

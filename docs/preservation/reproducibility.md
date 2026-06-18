@@ -1,6 +1,6 @@
 # Reproducibility
 
-This page describes the **preservation intent** for RadarLink and how the repository keeps builds and documentation reproducible.
+This page describes the **preservation intent** for RadarLink and how the repository keeps builds and documentation reproducible. For a quick start, see the [repository README](https://github.com/bulletproof20/RadarLink/blob/main/README.md).
 
 ## Principles
 
@@ -36,7 +36,18 @@ City files under `RadarLink_Extended/Montagem/cidades/` are the **single canonic
 |------------|----------|
 | Deliverable Docker build/run | `docker-compose.yml` |
 | Documentation pipeline | `scripts/docs-build.sh` |
-| GitHub Pages publication | `.github/workflows/docs.yml` → `https://bulletproof20.github.io/RadarLink/` |
+| GitHub Pages publication | `.github/workflows/docs.yml` → [https://bulletproof20.github.io/RadarLink/](https://bulletproof20.github.io/RadarLink/) |
+
+## Docker documentation services
+
+Individual compose services mirror parts of the full pipeline. Prefer `scripts/docs-build.sh` for the complete published site.
+
+| Service | Command | Output |
+|---------|---------|--------|
+| Checkpoint Doxygen | `docker compose run --rm doxygen-checkpoint` | `build/doxygen/checkpoint/html/` |
+| Deliverable Doxygen | `docker compose run --rm doxygen-deliverable` | `build/doxygen/deliverable/html/` |
+| MkDocs build | `docker compose run --rm mkdocs-build` | `site/` (narrative only) |
+| MkDocs preview | `docker compose run --rm -p 8000:8000 mkdocs-serve` | local preview on port 8000 |
 
 ## Local preview
 
