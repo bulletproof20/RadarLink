@@ -1,0 +1,43 @@
+# Doxygen configuration — RadarLink_Extended/Montagem (evaluated deliverable)
+# Run from repository root: doxygen Doxyfile.deliverable
+
+PROJECT_NAME           = "RadarLink — Deliverable API"
+PROJECT_BRIEF          = "API reference for the evaluated RadarLink_Extended deliverable."
+OUTPUT_DIRECTORY       = build/doxygen/deliverable
+CREATE_SUBDIRS         = NO
+
+INPUT                  = RadarLink_Extended/Montagem/main.c \
+                         RadarLink_Extended/Montagem/src
+FILE_PATTERNS          = *.c \
+                         *.h
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */html/*
+
+OUTPUT_LANGUAGE        = English
+OPTIMIZE_OUTPUT_FOR_C  = YES
+MARKDOWN_SUPPORT       = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+MULTILINE_CPP_IS_BRIEF = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+
+HAVE_DOT               = NO
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION   = NO
+REFERENCES_RELATION    = NO
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = NO

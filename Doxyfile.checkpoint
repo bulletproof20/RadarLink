@@ -1,0 +1,43 @@
+# Doxygen configuration — Academic_Edition (historical checkpoint)
+# Run from repository root: doxygen Doxyfile.checkpoint
+
+PROJECT_NAME           = "RadarLink — Checkpoint API"
+PROJECT_BRIEF          = "API reference for the frozen Academic_Edition checkpoint."
+OUTPUT_DIRECTORY       = build/doxygen/checkpoint
+CREATE_SUBDIRS         = NO
+
+INPUT                  = Academic_Edition/main.c \
+                         Academic_Edition/src
+FILE_PATTERNS          = *.c \
+                         *.h
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */html/*
+
+OUTPUT_LANGUAGE        = English
+OPTIMIZE_OUTPUT_FOR_C  = YES
+MARKDOWN_SUPPORT       = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+MULTILINE_CPP_IS_BRIEF = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+
+HAVE_DOT               = NO
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION   = NO
+REFERENCES_RELATION    = NO
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = NO
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = NO
