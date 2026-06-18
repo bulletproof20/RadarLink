@@ -45,11 +45,11 @@ The extended deliverable **copies and extends** the checkpoint architecture:
 | Layer | Tool | Audience |
 |-------|------|----------|
 | Narrative (this site) | MkDocs | Story, preservation, project timeline |
-| API reference | Doxygen (linked under `/api/…/html/`) | Function and struct-level detail per edition |
+| API reference | Doxygen (linked under `/RadarLink/api/…/html/`) | Function and struct-level detail per edition |
 
 !!! tip "Technical documentation (Doxygen)"
-    - [**Checkpoint API →**](/api/checkpoint/html/index.html)
-    - [**Deliverable API →**](/api/deliverable/html/index.html)
+    - [**Checkpoint API →**](/RadarLink/api/checkpoint/html/index.html)
+    - [**Deliverable API →**](/RadarLink/api/deliverable/html/index.html)
 
     [API Overview](../reference/index.md)
 

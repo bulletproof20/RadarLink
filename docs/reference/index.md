@@ -5,20 +5,20 @@ The **Doxygen** reference is a central part of this repository. It documents fun
 !!! tip "Published technical documentation (Doxygen)"
     | Edition | Description | Link |
     |---------|-------------|------|
-    | **Checkpoint API** | `Academic_Edition/` — intermediate evaluated submission | [**Open Checkpoint API →**](/api/checkpoint/html/index.html) |
-    | **Deliverable API** | `RadarLink_Extended/Montagem/` — integrated final hand-in | [**Open Deliverable API →**](/api/deliverable/html/index.html) |
+    | **Checkpoint API** | `Academic_Edition/` — intermediate evaluated submission | [**Open Checkpoint API →**](/RadarLink/api/checkpoint/html/index.html) |
+    | **Deliverable API** | `RadarLink_Extended/Montagem/` — integrated final hand-in | [**Open Deliverable API →**](/RadarLink/api/deliverable/html/index.html) |
 
     Root indexes (no `index.html` suffix):
 
-    - [Checkpoint API root](/api/checkpoint/html/)
-    - [Deliverable API root](/api/deliverable/html/)
+    - [Checkpoint API root](/RadarLink/api/checkpoint/html/)
+    - [Deliverable API root](/RadarLink/api/deliverable/html/)
 
 ## Narrative vs API
 
 | Layer | Tool | Location |
 |-------|------|----------|
 | Story, guide, preservation | MkDocs (this site) | `/` |
-| Function and struct reference | Doxygen HTML | `/api/checkpoint/html/`, `/api/deliverable/html/` |
+| Function and struct reference | Doxygen HTML | `/RadarLink/api/checkpoint/html/`, `/RadarLink/api/deliverable/html/` |
 
 MkDocs pages describe **context and how to reproduce** builds; Doxygen pages describe **implementation detail** per edition.
 

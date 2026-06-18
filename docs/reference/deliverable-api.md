@@ -1,9 +1,9 @@
 # Deliverable API Reference
 
 !!! tip "Published Deliverable API (Doxygen)"
-    [**Open Deliverable API →**](/api/deliverable/html/index.html)
+    [**Open Deliverable API →**](/RadarLink/api/deliverable/html/index.html)
 
-    Alternate entry: [Deliverable API root](/api/deliverable/html/)
+    Alternate entry: [Deliverable API root](/RadarLink/api/deliverable/html/)
 
 This page links to the **Doxygen HTML reference** for `RadarLink_Extended/Montagem/` — the evaluated integrated deliverable.
 
@@ -39,7 +39,7 @@ doxygen Doxyfile.deliverable
 
 Browse the deliverable Doxygen reference on GitHub Pages:
 
-- [Deliverable API index](/api/deliverable/html/index.html)
-- [Deliverable API root](/api/deliverable/html/)
+- [Deliverable API index](/RadarLink/api/deliverable/html/index.html)
+- [Deliverable API root](/RadarLink/api/deliverable/html/)
 
 Local builds write to `build/doxygen/deliverable/html/` before the docs-build merge step copies output into the published site tree.

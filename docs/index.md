@@ -14,8 +14,8 @@ This documentation site is an **academic, technical, and historical record** of 
 !!! tip "Technical documentation (Doxygen)"
     | Edition | Link |
     |---------|------|
-    | **Checkpoint API** — `Academic_Edition/` | [**Open Checkpoint API →**](/api/checkpoint/html/index.html) |
-    | **Deliverable API** — `RadarLink_Extended/Montagem/` | [**Open Deliverable API →**](/api/deliverable/html/index.html) |
+    | **Checkpoint API** — `Academic_Edition/` | [**Open Checkpoint API →**](/RadarLink/api/checkpoint/html/index.html) |
+    | **Deliverable API** — `RadarLink_Extended/Montagem/` | [**Open Deliverable API →**](/RadarLink/api/deliverable/html/index.html) |
 
     See also the [API Overview](reference/index.md) page for build instructions and context.
 

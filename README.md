@@ -139,10 +139,10 @@ https://bulletproof20.github.io/RadarLink/
 
 ### Doxygen API
 
-| Edition           | Documentation   |
-| ----------------- | --------------- |
-| Academic Edition  | Checkpoint API  |
-| Final Deliverable | Deliverable API |
+| Edition           | Documentation |
+| ----------------- | ------------- |
+| Academic Edition  | [Checkpoint API](https://bulletproof20.github.io/RadarLink/api/checkpoint/html/index.html) |
+| Final Deliverable | [Deliverable API](https://bulletproof20.github.io/RadarLink/api/deliverable/html/index.html) |
 
 ### Assignment
 

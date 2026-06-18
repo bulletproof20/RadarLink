@@ -8,8 +8,8 @@
 !!! tip "Technical documentation (Doxygen)"
     | Edition | Link |
     |---------|------|
-    | **Deliverable API** (this tree) | [**Open Deliverable API →**](/api/deliverable/html/index.html) |
-    | Checkpoint API (for comparison) | [Checkpoint API →](/api/checkpoint/html/index.html) |
+    | **Deliverable API** (this tree) | [**Open Deliverable API →**](/RadarLink/api/deliverable/html/index.html) |
+    | Checkpoint API (for comparison) | [Checkpoint API →](/RadarLink/api/checkpoint/html/index.html) |
 
     Full reference hub: [API Overview](../reference/index.md).
 

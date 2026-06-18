@@ -74,5 +74,5 @@ Open the URL printed in the terminal, or open `site/index.html` after `docs-buil
 ## Published API reference
 
 !!! tip "Doxygen on GitHub Pages"
-    - [Checkpoint API](/api/checkpoint/html/index.html)
-    - [Deliverable API](/api/deliverable/html/index.html)
+    - [Checkpoint API](/RadarLink/api/checkpoint/html/index.html)
+    - [Deliverable API](/RadarLink/api/deliverable/html/index.html)

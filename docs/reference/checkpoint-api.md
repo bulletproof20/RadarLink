@@ -1,9 +1,9 @@
 # Checkpoint API Reference
 
 !!! tip "Published Checkpoint API (Doxygen)"
-    [**Open Checkpoint API →**](/api/checkpoint/html/index.html)
+    [**Open Checkpoint API →**](/RadarLink/api/checkpoint/html/index.html)
 
-    Alternate entry: [Checkpoint API root](/api/checkpoint/html/)
+    Alternate entry: [Checkpoint API root](/RadarLink/api/checkpoint/html/)
 
 This page links to the **Doxygen HTML reference** for `Academic_Edition/` — the frozen historical checkpoint submitted for academic evaluation.
 
@@ -39,7 +39,7 @@ doxygen Doxyfile.checkpoint
 
 Browse the checkpoint Doxygen reference on GitHub Pages:
 
-- [Checkpoint API index](/api/checkpoint/html/index.html)
-- [Checkpoint API root](/api/checkpoint/html/)
+- [Checkpoint API index](/RadarLink/api/checkpoint/html/index.html)
+- [Checkpoint API root](/RadarLink/api/checkpoint/html/)
 
 Local builds write to `build/doxygen/checkpoint/html/` before the docs-build merge step copies output into the published site tree.

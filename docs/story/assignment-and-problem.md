@@ -34,8 +34,8 @@ Test cities live under `Academic_Edition/cidades/` and `RadarLink_Extended/Monta
 For automatically generated API documentation:
 
 !!! tip "Doxygen API"
-    - [**Checkpoint API →**](/api/checkpoint/html/index.html) — `Academic_Edition/`
-    - [**Deliverable API →**](/api/deliverable/html/index.html) — `RadarLink_Extended/Montagem/`
+    - [**Checkpoint API →**](/RadarLink/api/checkpoint/html/index.html) — `Academic_Edition/`
+    - [**Deliverable API →**](/RadarLink/api/deliverable/html/index.html) — `RadarLink_Extended/Montagem/`
 
 ## Where to look next
 
