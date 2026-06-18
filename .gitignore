@@ -1,0 +1,9 @@
+build/
+site/
+*.exe
+*.o
+Academic_Edition/html/
+RadarLink_Extended/Montagem/html/
+.venv/
+__pycache__/
+.vscode/
