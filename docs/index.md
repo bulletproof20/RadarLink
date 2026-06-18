@@ -10,8 +10,9 @@ This documentation site tells **one academic project story** in chronological or
 |---------|---------|
 | **Story** | Why the project exists, the checkpoint submission, the integrated deliverable milestone, and how the two artefacts relate in the project timeline. |
 | **Preservation** | How the repository keeps source, builds, and documentation reproducible over time. |
+| **Reference** | Published Doxygen API reference for the checkpoint and deliverable moments (`/api/…/html/`). |
 
-Later sections (**engineering**, **reference**) will explain implementation detail and link to Doxygen API output without embedding generated HTML here.
+The **Reference** section links to generated API HTML merged into the published site; narrative pages stay in MkDocs without embedding Doxygen output.
 
 ## Repository layout
 

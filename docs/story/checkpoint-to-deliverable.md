@@ -12,7 +12,7 @@ Enunciado → problem analysis → Academic_Edition → RadarLink_Extended → e
 |--------|--------|---------------------|
 | Checkpoint | `Academic_Edition/` | What was evaluated as the checkpoint submission at that stage of the project? |
 | Deliverable | `RadarLink_Extended/Montagem/` | What was evaluated as the integrated deliverable? |
-| Preservation | `docs/`, Docker, CI (later) | How is the story kept reproducible and public? |
+| Preservation | `docs/`, Docker, GitHub Pages | How is the story kept reproducible and public? |
 
 ## Technical lineage
 
@@ -29,14 +29,14 @@ The extended deliverable **copies and extends** the checkpoint architecture:
 - Feature flags or shared libraries that replace the checkpoint source
 - Rewriting checkpoint files to match the deliverable
 
-## Documentation split (planned)
+## Documentation split
 
 | Layer | Tool | Audience |
 |-------|------|----------|
-| Narrative (this site) | MkDocs | Story, engineering explanation, preservation |
-| API reference | Doxygen (linked, not embedded) | Function and struct-level detail per edition |
+| Narrative (this site) | MkDocs | Story, preservation, project timeline |
+| API reference | Doxygen (linked under `/api/…/html/`) | Function and struct-level detail per edition |
 
-Engineering deep-dives and Doxygen links will appear in later documentation phases.
+Use the **Reference** section in the navigation bar for published checkpoint and deliverable API indexes.
 
 ## PDF copies
 

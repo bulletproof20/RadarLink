@@ -17,9 +17,9 @@ The checkpoint source documents the project at an intermediate evaluated moment 
 Build locally:
 
 ```bash
-./scripts/build-docs.sh
+./scripts/docs-build.sh
 # or (Windows)
-./scripts/build-docs.ps1
+./scripts/docs-build.ps1
 ```
 
 To generate only the checkpoint reference:
@@ -28,8 +28,11 @@ To generate only the checkpoint reference:
 doxygen Doxyfile.checkpoint
 ```
 
-## API browser (placeholder)
+## Published API
 
-MkDocs integration and published links will be added in a later phase. For now, open the generated HTML directly after running the build scripts above.
+Browse the checkpoint Doxygen reference on GitHub Pages:
 
-<!-- Future: link to published checkpoint API root, e.g. reference/checkpoint/index.html -->
+- [Checkpoint API index](/api/checkpoint/html/index.html)
+- [Checkpoint API root](/api/checkpoint/html/)
+
+Local builds write to `build/doxygen/checkpoint/html/` before the docs-build merge step copies output into the published site tree.

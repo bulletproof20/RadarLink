@@ -17,9 +17,9 @@ The deliverable continues the project timeline from the checkpoint: same module 
 Build locally:
 
 ```bash
-./scripts/build-docs.sh
+./scripts/docs-build.sh
 # or (Windows)
-./scripts/build-docs.ps1
+./scripts/docs-build.ps1
 ```
 
 To generate only the deliverable reference:
@@ -28,8 +28,11 @@ To generate only the deliverable reference:
 doxygen Doxyfile.deliverable
 ```
 
-## API browser (placeholder)
+## Published API
 
-MkDocs integration and published links will be added in a later phase. For now, open the generated HTML directly after running the build scripts above.
+Browse the deliverable Doxygen reference on GitHub Pages:
 
-<!-- Future: link to published deliverable API root, e.g. reference/deliverable/index.html -->
+- [Deliverable API index](/api/deliverable/html/index.html)
+- [Deliverable API root](/api/deliverable/html/)
+
+Local builds write to `build/doxygen/deliverable/html/` before the docs-build merge step copies output into the published site tree.

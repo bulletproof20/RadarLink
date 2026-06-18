@@ -1,6 +1,6 @@
 # Reproducibility
 
-This page describes the **preservation intent** for RadarLink. Tooling (Docker, CI, Doxygen configs) will be added in later phases; this document anchors the strategy early.
+This page describes the **preservation intent** for RadarLink and how the repository keeps builds and documentation reproducible.
 
 ## Principles
 
@@ -12,7 +12,7 @@ This page describes the **preservation intent** for RadarLink. Tooling (Docker, 
 
 The root `.gitignore` excludes:
 
-- `build/`, `site/` — future build and MkDocs output
+- `build/`, `site/` — generated build and MkDocs output (not versioned)
 - `*.exe`, `*.o` — binaries and object files
 - `Academic_Edition/html/`, `RadarLink_Extended/Montagem/html/` — local Doxygen drops
 - `.venv/`, `__pycache__/`, `.vscode/` — local tooling
@@ -24,27 +24,35 @@ The root `.gitignore` excludes:
 | Checkpoint program | `Academic_Edition/` | `Programa` / `Programa.exe` |
 | Deliverable program | `RadarLink_Extended/Montagem/` | `RadarLink` / `RadarLink.exe` |
 | Narrative docs | repository root + `docs/` | `site/` (MkDocs) |
-| API docs (planned) | per-edition Doxyfile | `build/doxygen/…/html/` |
+| API docs | `Doxyfile.checkpoint`, `Doxyfile.deliverable` | `build/doxygen/…/html/` → merged to `site/api/…/html/` |
 
 ## Test data
 
 City files under `RadarLink_Extended/Montagem/cidades/` are the **single canonical set** for running the deliverable. The checkpoint keeps its own identical copy under `Academic_Edition/cidades/` for historical self-containment.
 
-## Planned next steps (not implemented yet)
+## Automation
 
-- Docker images for `gcc` build and MkDocs/Doxygen generation
-- GitHub Actions workflow validating build + docs
-- GitHub Pages publishing from CI
+| Capability | Location |
+|------------|----------|
+| Deliverable Docker build/run | `docker-compose.yml` |
+| Documentation pipeline | `scripts/docs-build.sh` |
+| GitHub Pages publication | `.github/workflows/docs.yml` → `https://bulletproof20.github.io/RadarLink/` |
 
-These will be introduced in subsequent preservation work on the repository.
+## Local preview
 
-## Local preview (MkDocs)
+Full published site (Doxygen + MkDocs + API merge), same as CI:
 
-When Python and MkDocs Material are available:
+```bash
+./scripts/docs-build.sh
+# or (Windows)
+./scripts/docs-build.ps1
+```
+
+Narrative-only preview when Python and MkDocs Material are available locally:
 
 ```bash
 pip install mkdocs-material
 mkdocs serve
 ```
 
-Open the URL printed in the terminal to validate navigation before deployment.
+Open the URL printed in the terminal, or open `site/index.html` after `docs-build`.
