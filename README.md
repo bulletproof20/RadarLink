@@ -2,35 +2,49 @@
 
 RadarLink is a graph-based application written in **C** that models a city-wide network of radar antennas from text-based maps. Each occupied position in the city grid represents an antenna operating at a specific resonance frequency.
 
-The project combines **file processing**, **dynamic data structures**, **graph algorithms**, and **geometric analysis** to study relationships between antennas, discover communication paths, and identify signal intersections.
+The project was developed to explore how radar antennas distributed across a city can be represented, analysed, and connected through graph structures. By transforming a city map into a network of frequency-based subgraphs, RadarLink enables the study of connectivity, traversal strategies, path discovery, and signal intersection analysis.
 
-**Documentation Website:** https://bulletproof20.github.io/RadarLink/
+The application combines **file processing**, **dynamic data structures**, **graph algorithms**, and **geometric computations**, providing a practical introduction to algorithmic problem solving and data structure design in C.
+
+**Documentation Website:**
+https://bulletproof20.github.io/RadarLink/
 
 ---
 
 ## Academic Context
 
-| Detail        | Value                                  |
-| ------------- | -------------------------------------- |
-| Unit          | Estruturas Avançadas de Dados (EAD)    |
-| Programme     | Engenharia de Informática Médica (EIM) |
-| Institution   | IPCA                                   |
-| Academic Year | 1st Year, 2nd Semester                 |
+| Detail           | Value                                          |
+| ---------------- | ---------------------------------------------- |
+| Student          | Ivo Sá (22604)                                 |
+| Course Unit      | Advanced Data Structures                       |
+| Degree Programme | Medical Informatics Engineering             |
+| Institution      | Polytechnic Institute of Cávado and Ave (IPCA) |
+| Academic Period  | First Year, Second Semester                    |
 
-RadarLink was developed during the second semester of the first year of the degree programme as part of the **Estruturas Avançadas de Dados (EAD)** course.
+RadarLink was developed during the second semester of the first year of the Biomedical Informatics Engineering degree programme as part of the **Advanced Data Structures** course.
 
-It was one of my first independent projects written in **C**, representing my first substantial contact with low-level programming concepts such as manual memory management, graph modelling, and algorithm implementation.
+This project represented one of my first independent software development experiences in **C**, providing substantial exposure to manual memory management, graph modelling, algorithm implementation, and low-level programming concepts.
 
-Beyond the academic requirements, the project also became an opportunity for personal experimentation, curiosity-driven learning, and technical growth.
+Although developed within an academic setting, the project also became an opportunity for personal experimentation, curiosity-driven learning, and technical growth beyond the minimum course requirements.
 
-**Original Assignment (Enunciado):**
+The current repository preserves both the original evaluated work and the documentation infrastructure created afterwards to ensure long-term accessibility, reproducibility, and public availability.
 
-* Documentation Site: `Enunciado.docx.pdf`
-* Repository: `RadarLink_Extended/Enunciado.docx.pdf`
+### Original Assignment
+
+The original project specification is available through:
+
+* Documentation website PDF
+* Repository copy: `RadarLink_Extended/Enunciado.docx.pdf`
 
 ---
 
-## Project Overview
+## Problem Overview
+
+The project begins with a city description stored in a text file.
+
+Each valid position in the map may contain a radar antenna identified by a resonance frequency. Antennas operating at the same frequency are grouped together, allowing the creation of frequency-specific graph structures.
+
+These graphs can then be analysed using traversal and path-discovery algorithms, while geometric calculations are used to identify potential intersections between signal paths.
 
 ```text
 City File
@@ -48,16 +62,12 @@ Traversal & Analysis
 Signal Intersection Detection
 ```
 
-The application loads a city description from a text file and constructs graph structures representing antenna networks grouped by frequency.
-
-The resulting graph can then be analysed through several traversal and path-discovery algorithms.
-
 ---
 
 ## Key Features
 
 * City modelling through text-based matrices
-* Antenna grouping by resonance frequency
+* Radar antenna grouping by resonance frequency
 * Multi-layer graph construction
 * Breadth-First Search (BFS)
 * Depth-First Search (DFS)
@@ -74,30 +84,30 @@ The resulting graph can then be analysed through several traversal and path-disc
 ## Project Timeline
 
 ```text
-1st Year, 2nd Semester
-        ↓
+First Year, Second Semester
+            ↓
 Original Assignment
-        ↓
+            ↓
 Academic_Edition (Checkpoint)
-        ↓
+            ↓
 RadarLink_Extended (Final Deliverable)
-        ↓
-Evaluation
-        ↓
-Documentation Preservation
-        ↓
+            ↓
+Academic Evaluation
+            ↓
+Documentation & Preservation
+            ↓
 GitHub Pages Publication
 ```
 
 This repository preserves a single academic project at multiple stages of its lifecycle.
 
-| Stage             | Folder                         | Description                               |
-| ----------------- | ------------------------------ | ----------------------------------------- |
-| Checkpoint        | `Academic_Edition/`            | Intermediate evaluated submission         |
-| Final Deliverable | `RadarLink_Extended/Montagem/` | Final evaluated version                   |
-| Documentation     | `docs/`                        | Narrative documentation and API reference |
+| Stage                        | Folder                         | Description                                                             |
+| ---------------------------- | ------------------------------ | ----------------------------------------------------------------------- |
+| Checkpoint                   | `Academic_Edition/`            | Intermediate evaluated submission                                       |
+| Final Deliverable            | `RadarLink_Extended/Montagem/` | Final evaluated version                                                 |
+| Documentation & Preservation | `docs/`                        | Documentation, API reference, reproducibility, and project preservation |
 
-The checkpoint and deliverable are historical milestones of the same project rather than independent versions.
+The checkpoint and deliverable are historical milestones of the same project rather than separate software products.
 
 ---
 
@@ -127,7 +137,7 @@ Generated binary:
 build/deliverable/RadarLink
 ```
 
-For detailed instructions see the documentation website.
+For detailed instructions, refer to the documentation website.
 
 ---
 
@@ -137,18 +147,18 @@ For detailed instructions see the documentation website.
 
 https://bulletproof20.github.io/RadarLink/
 
-### Doxygen API
+### Doxygen API Reference
 
-| Edition           | Documentation |
-| ----------------- | ------------- |
-| Academic Edition  | [Checkpoint API](https://bulletproof20.github.io/RadarLink/api/checkpoint/html/index.html) |
-| Final Deliverable | [Deliverable API](https://bulletproof20.github.io/RadarLink/api/deliverable/html/index.html) |
+| Edition           | Documentation                                                             |
+| ----------------- | ------------------------------------------------------------------------- |
+| Academic Edition  | https://bulletproof20.github.io/RadarLink/api/checkpoint/html/index.html  |
+| Final Deliverable | https://bulletproof20.github.io/RadarLink/api/deliverable/html/index.html |
 
-### Assignment
+### Original Assignment
 
-Original project statement available through:
+Available through:
 
-* Documentation site PDF
+* Documentation website PDF
 * Repository copy (`RadarLink_Extended/Enunciado.docx.pdf`)
 
 ---
@@ -161,18 +171,28 @@ Through the development of RadarLink I gained practical experience with:
 * Dynamic memory allocation
 * Linked data structures
 * Graph representation and traversal
-* BFS and DFS algorithms
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
 * Path enumeration techniques
 * Geometric computations
-* Software documentation with Doxygen
-* Build reproducibility using Docker
-* Long-term software preservation using MkDocs and GitHub Pages
+* Software architecture and organisation
+* Problem-solving using graph-based models
+
+The later preservation phase also provided experience with:
+
+* Docker
+* Doxygen
+* MkDocs
+* GitHub Actions
+* GitHub Pages
+* Documentation automation
+* Software preservation practices
 
 ---
 
 ## Repository Preservation
 
-The application source code preserved in:
+The source code preserved in:
 
 * `Academic_Edition/`
 * `RadarLink_Extended/Montagem/`
@@ -188,7 +208,7 @@ Recent work on this repository focused exclusively on:
 * GitHub Pages publication
 * Repository preservation
 
-The objective is to preserve and document the original project rather than rewrite or modernise it.
+The objective of this repository is to preserve, document, and present the original academic project rather than rewrite, refactor, or modernise it.
 
 ---
 
@@ -205,10 +225,16 @@ The objective is to preserve and document the original project rather than rewri
 
 ## Author
 
-**Ivo Sá**
+**Ivo Sá (22604)**
 
-* Engenharia de Informática Médica (EIM)
-* IPCA
-* Estruturas Avançadas de Dados (EAD)
+* Bachelor's Degree in Biomedical Informatics Engineering
+* Polytechnic Institute of Cávado and Ave (IPCA)
+* Advanced Data Structures
 
-Project preserved and documented as part of an ongoing software engineering portfolio.
+RadarLink was originally developed during the second semester of the first year of the Biomedical Informatics Engineering degree programme as part of the Advanced Data Structures course.
+
+The project represents one of my earliest substantial experiences with the C programming language, introducing concepts such as manual memory management, graph modelling, algorithm implementation, and data structure design.
+
+While initially developed to satisfy academic requirements, it also became an opportunity for independent exploration, curiosity-driven learning, and technical growth beyond the scope of the coursework.
+
+The current repository preserves both the original evaluated project and the documentation infrastructure added afterwards, ensuring long-term accessibility, reproducibility, and public availability through Docker, Doxygen, MkDocs, GitHub Actions, and GitHub Pages.
