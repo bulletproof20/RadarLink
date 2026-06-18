@@ -1,160 +1,214 @@
 # RadarLink
 
-**RadarLink** is a console application in C that models a city grid of radar antennas. Each occupied cell in a text file represents an antenna with a resonance frequency. The program loads a city matrix, builds a multi-layer graph grouped by frequency, and supports graph traversals, path enumeration, and geometric intersection analysis between signal segments.
+RadarLink is a graph-based application written in **C** that models a city-wide network of radar antennas from text-based maps. Each occupied position in the city grid represents an antenna operating at a specific resonance frequency.
 
-This repository preserves **one academic project** at two moments in the same timeline — an evaluated checkpoint and an evaluated deliverable — plus the documentation and tooling that keep both reproducible and public.
+The project combines **file processing**, **dynamic data structures**, **graph algorithms**, and **geometric analysis** to study relationships between antennas, discover communication paths, and identify signal intersections.
 
-**Documentation site:** [https://bulletproof20.github.io/RadarLink/](https://bulletproof20.github.io/RadarLink/)
+**Documentation Website:** https://bulletproof20.github.io/RadarLink/
 
-## Academic context
+---
 
-| Detail | Value |
-|--------|-------|
-| **Unit** | Estruturas Avançadas de Dados (EAD) |
-| **Programme** | Engenharia de Informática Médica (EIM) |
-| **Institution** | IPCA |
-| **Academic year** | 1st year, 2nd semester |
+## Academic Context
 
-The project was among the first independent practical work with **C** during the degree. Full context on the [Academic Context](https://bulletproof20.github.io/RadarLink/story/academic-context/) page.
+| Detail        | Value                                  |
+| ------------- | -------------------------------------- |
+| Unit          | Estruturas Avançadas de Dados (EAD)    |
+| Programme     | Engenharia de Informática Médica (EIM) |
+| Institution   | IPCA                                   |
+| Academic Year | 1st Year, 2nd Semester                 |
 
-**Original assignment (*Enunciado*):**
+RadarLink was developed during the second semester of the first year of the degree programme as part of the **Estruturas Avançadas de Dados (EAD)** course.
 
-- On the published site: [Enunciado.docx.pdf](https://bulletproof20.github.io/RadarLink/assets/Enunciado.docx.pdf)
-- In the repository: `RadarLink_Extended/Enunciado.docx.pdf`
+It was one of my first independent projects written in **C**, representing my first substantial contact with low-level programming concepts such as manual memory management, graph modelling, and algorithm implementation.
 
-## Preservation, not rewrite
+Beyond the academic requirements, the project also became an opportunity for personal experimentation, curiosity-driven learning, and technical growth.
 
-Recent work on this repository changed **documentation, automation, GitHub Actions, GitHub Pages, MkDocs, and Doxygen integration** only. The application source in `Academic_Edition/` and `RadarLink_Extended/Montagem/` was **not** functionally modified, refactored, or extended after evaluation.
+**Original Assignment (Enunciado):**
 
-Details: [Repository Evolution](https://bulletproof20.github.io/RadarLink/preservation/repository-evolution/) on the documentation site.
+* Documentation Site: `Enunciado.docx.pdf`
+* Repository: `RadarLink_Extended/Enunciado.docx.pdf`
 
-## Project Story
+---
 
-The project follows a single journey from assignment to preservation:
-
-```text
-Enunciado → analysis → Academic_Edition (checkpoint) → RadarLink_Extended/Montagem (deliverable) → evaluation → documentation & preservation
-```
-
-| Moment | Folder | Role |
-|--------|--------|------|
-| **Checkpoint** | `Academic_Edition/` | Frozen source as submitted at an intermediate evaluated stage of the project. |
-| **Deliverable** | `RadarLink_Extended/Montagem/` | Integrated final hand-in — canonical build and run target. |
-| **Documentation & preservation** | `docs/`, Docker, Doxygen, GitHub Pages | Narrative site, API reference, and reproducible builds. |
-
-The checkpoint and deliverable are **not** two parallel products or version lines. They are historical artefacts on the same project timeline.
-
-## Technical documentation (Doxygen)
-
-| Edition | Published API |
-|---------|-----------------|
-| **Checkpoint** — `Academic_Edition/` | [Checkpoint API](https://bulletproof20.github.io/RadarLink/api/checkpoint/html/index.html) |
-| **Deliverable** — `RadarLink_Extended/Montagem/` | [Deliverable API](https://bulletproof20.github.io/RadarLink/api/deliverable/html/index.html) |
-
-API overview and build instructions: [Reference section](https://bulletproof20.github.io/RadarLink/reference/) on the documentation site.
-
-## Repository Structure
+## Project Overview
 
 ```text
-Academic_Edition/           Checkpoint source (frozen)
-RadarLink_Extended/
-  └── Montagem/             Deliverable source — build and run root
-docs/                       MkDocs narrative (Story, Guide, Preservation, Reference)
-  └── assets/               Site assets (icon, Enunciado PDF)
-docker/                     Docker images for deliverable and documentation tooling
-scripts/                    Build scripts (docs-build, merge-api)
-Doxyfile.checkpoint         Doxygen config for checkpoint API
-Doxyfile.deliverable        Doxygen config for deliverable API
-mkdocs.yml                  MkDocs site configuration
-docker-compose.yml          Deliverable build/run and documentation services
-.github/workflows/docs.yml  GitHub Pages publication (docs-build on push/PR)
-build/                      Generated binaries and Doxygen output (not versioned)
-site/                       Generated MkDocs + merged API site (not versioned)
+City File
+    ↓
+City Matrix
+    ↓
+Radar Antennas
+    ↓
+Frequency-Based Subgraphs
+    ↓
+Graph Construction
+    ↓
+Traversal & Analysis
+    ↓
+Signal Intersection Detection
 ```
 
-## Running the Evaluated Deliverable
+The application loads a city description from a text file and constructs graph structures representing antenna networks grouped by frequency.
 
-Build the Linux binary with Docker:
+The resulting graph can then be analysed through several traversal and path-discovery algorithms.
+
+---
+
+## Key Features
+
+* City modelling through text-based matrices
+* Antenna grouping by resonance frequency
+* Multi-layer graph construction
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
+* Path discovery and enumeration
+* Signal segment generation
+* Geometric intersection detection
+* Interactive console interface
+* Docker-based reproducible builds
+* Doxygen API documentation
+* GitHub Pages publication
+
+---
+
+## Project Timeline
+
+```text
+1st Year, 2nd Semester
+        ↓
+Original Assignment
+        ↓
+Academic_Edition (Checkpoint)
+        ↓
+RadarLink_Extended (Final Deliverable)
+        ↓
+Evaluation
+        ↓
+Documentation Preservation
+        ↓
+GitHub Pages Publication
+```
+
+This repository preserves a single academic project at multiple stages of its lifecycle.
+
+| Stage             | Folder                         | Description                               |
+| ----------------- | ------------------------------ | ----------------------------------------- |
+| Checkpoint        | `Academic_Edition/`            | Intermediate evaluated submission         |
+| Final Deliverable | `RadarLink_Extended/Montagem/` | Final evaluated version                   |
+| Documentation     | `docs/`                        | Narrative documentation and API reference |
+
+The checkpoint and deliverable are historical milestones of the same project rather than independent versions.
+
+---
+
+## Running the Deliverable
+
+Build:
 
 ```bash
 docker compose run --rm deliverable-build
 ```
 
-Run the interactive program (requires a TTY):
+Run:
 
 ```bash
 docker compose run --rm -it deliverable-run
 ```
 
-When prompted for a city file, use a path relative to the Montagem working directory, for example:
+Example city file:
 
 ```text
 cidades/cidade1.txt
 ```
 
-The binary is written to `build/deliverable/RadarLink`.
+Generated binary:
 
-See [How to Run](https://bulletproof20.github.io/RadarLink/guide/how-to-run/) on the documentation site.
-
-## Documentation
-
-The project separates **narrative documentation** from **API reference**:
-
-| Layer | Tool | Purpose |
-|-------|------|---------|
-| Story, guide, preservation | [MkDocs](https://www.mkdocs.org/) | Project journey, how to run, reproducibility |
-| Function and struct reference | [Doxygen](https://www.doxygen.org/) | Per-edition API HTML, merged into the published site |
-
-**Published site (GitHub Pages):**
-
-| Resource | URL |
-|----------|-----|
-| Documentation home | https://bulletproof20.github.io/RadarLink/ |
-| Checkpoint API | https://bulletproof20.github.io/RadarLink/api/checkpoint/html/ |
-| Deliverable API | https://bulletproof20.github.io/RadarLink/api/deliverable/html/ |
-| Assignment PDF | https://bulletproof20.github.io/RadarLink/assets/Enunciado.docx.pdf |
-
-Publication is automated by [GitHub Actions](https://github.com/bulletproof20/RadarLink/blob/main/.github/workflows/docs.yml) on push to `main`.
-
-## Reproducing Documentation Locally
-
-**Full site (recommended)** — Doxygen checkpoint + deliverable, MkDocs build, and API merge into `site/`:
-
-```bash
-./scripts/docs-build.sh
+```text
+build/deliverable/RadarLink
 ```
 
-Windows (PowerShell):
+For detailed instructions see the documentation website.
 
-```powershell
-./scripts/docs-build.ps1
-```
+---
 
-**Docker — partial or preview services** (from repository root):
+## Technical Documentation
 
-```bash
-# Doxygen only
-docker compose run --rm doxygen-checkpoint
-docker compose run --rm doxygen-deliverable
+### Documentation Website
 
-# MkDocs narrative site only (does not merge API HTML)
-docker compose run --rm mkdocs-build
+https://bulletproof20.github.io/RadarLink/
 
-# Live preview on http://localhost:8000 (narrative only)
-docker compose run --rm -p 8000:8000 mkdocs-serve
-```
+### Doxygen API
 
-Use `docs-build` for the complete published tree including `/api/checkpoint/html/` and `/api/deliverable/html/`.
+| Edition           | Documentation   |
+| ----------------- | --------------- |
+| Academic Edition  | Checkpoint API  |
+| Final Deliverable | Deliverable API |
+
+### Assignment
+
+Original project statement available through:
+
+* Documentation site PDF
+* Repository copy (`RadarLink_Extended/Enunciado.docx.pdf`)
+
+---
+
+## Learning Outcomes
+
+Through the development of RadarLink I gained practical experience with:
+
+* Programming in C
+* Dynamic memory allocation
+* Linked data structures
+* Graph representation and traversal
+* BFS and DFS algorithms
+* Path enumeration techniques
+* Geometric computations
+* Software documentation with Doxygen
+* Build reproducibility using Docker
+* Long-term software preservation using MkDocs and GitHub Pages
+
+---
+
+## Repository Preservation
+
+The application source code preserved in:
+
+* `Academic_Edition/`
+* `RadarLink_Extended/Montagem/`
+
+has not been functionally modified after academic evaluation.
+
+Recent work on this repository focused exclusively on:
+
+* Documentation generation
+* Doxygen integration
+* MkDocs documentation
+* GitHub Actions automation
+* GitHub Pages publication
+* Repository preservation
+
+The objective is to preserve and document the original project rather than rewrite or modernise it.
+
+---
 
 ## Technologies
 
-- C
-- Docker
-- MkDocs (Material theme)
-- Doxygen
-- GitHub Pages
-- GitHub Actions
+* C
+* Docker
+* Doxygen
+* MkDocs Material
+* GitHub Actions
+* GitHub Pages
+
+---
 
 ## Author
 
-Ivo Sá — IPCA, EIM, Estruturas Avançadas de Dados (EAD).
+**Ivo Sá**
+
+* Engenharia de Informática Médica (EIM)
+* IPCA
+* Estruturas Avançadas de Dados (EAD)
+
+Project preserved and documented as part of an ongoing software engineering portfolio.
