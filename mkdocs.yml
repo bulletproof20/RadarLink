@@ -12,6 +12,9 @@ nav:
       - Checkpoint to Deliverable: story/checkpoint-to-deliverable.md
   - Preservation:
       - Reproducibility: preservation/reproducibility.md
+  - Reference:
+      - Checkpoint API: reference/checkpoint-api.md
+      - Deliverable API: reference/deliverable-api.md
 
 theme:
   name: material

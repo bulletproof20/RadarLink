@@ -40,3 +40,55 @@ services:
       - ./build/deliverable/RadarLink:/work/RadarLink_Extended/Montagem/RadarLink:ro
       - ./RadarLink_Extended/Montagem/cidades:/work/RadarLink_Extended/Montagem/cidades:ro
     entrypoint: ["./RadarLink"]
+
+  doxygen-checkpoint:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.doxygen
+    image: radarlink-doxygen:local
+    working_dir: /work
+    volumes:
+      - .:/work
+    command:
+      - sh
+      - -c
+      - |
+        set -e
+        doxygen Doxyfile.checkpoint
+
+  doxygen-deliverable:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.doxygen
+    image: radarlink-doxygen:local
+    working_dir: /work
+    volumes:
+      - .:/work
+    command:
+      - sh
+      - -c
+      - |
+        set -e
+        doxygen Doxyfile.deliverable
+
+  mkdocs-build:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mkdocs
+    image: radarlink-mkdocs:local
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: ["build"]
+
+  mkdocs-serve:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mkdocs
+    image: radarlink-mkdocs:local
+    working_dir: /work
+    volumes:
+      - .:/work
+    ports:
+      - "8000:8000"
+    command: ["serve", "-a", "0.0.0.0:8000"]

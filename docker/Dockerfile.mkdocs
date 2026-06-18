@@ -1,0 +1,10 @@
+# MkDocs site build and local preview for narrative documentation.
+# Run from repository root via compose or: mkdocs build
+
+FROM python:3.12-slim-bookworm
+
+RUN pip install --no-cache-dir mkdocs mkdocs-material
+
+WORKDIR /work
+
+ENTRYPOINT ["mkdocs"]
