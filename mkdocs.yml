@@ -1,0 +1,29 @@
+site_name: RadarLink
+site_description: >-
+  Single academic project documenting the RadarLink antenna-network program —
+  from evaluated checkpoint through extended deliverable to preservation.
+
+nav:
+  - Home: index.md
+  - Story:
+      - Assignment and Problem: story/assignment-and-problem.md
+      - Checkpoint (Academic Edition): story/checkpoint-academic-edition.md
+      - Deliverable (RadarLink Extended): story/deliverable-radarlink-extended.md
+      - Checkpoint to Deliverable: story/checkpoint-to-deliverable.md
+  - Preservation:
+      - Reproducibility: preservation/reproducibility.md
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
