@@ -1,0 +1,11 @@
+.git
+.gitignore
+**/.vscode
+Academic_Edition
+build
+site
+.venv
+__pycache__
+**/html/
+*.exe
+*.o

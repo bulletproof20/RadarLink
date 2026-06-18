@@ -1,0 +1,42 @@
+name: radarlink
+
+services:
+  deliverable-build:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.deliverable
+      target: build
+    image: radarlink-deliverable-build:local
+    working_dir: /work/RadarLink_Extended/Montagem
+    volumes:
+      - ./RadarLink_Extended/Montagem:/work/RadarLink_Extended/Montagem:ro
+      - ./build/deliverable:/out
+    command:
+      - sh
+      - -c
+      - |
+        set -e
+        gcc -std=c99 -Wall -Wextra -I src main.c \
+          src/interface.c \
+          src/process_esp.c \
+          src/process_ficheiro.c \
+          src/process_geral.c \
+          src/process_nef.c \
+          -o /out/RadarLink
+        chmod +x /out/RadarLink
+        echo "Built /out/RadarLink"
+        ls -la /out/RadarLink
+
+  deliverable-run:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.deliverable
+      target: runtime
+    image: radarlink-deliverable-run:local
+    working_dir: /work/RadarLink_Extended/Montagem
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./build/deliverable/RadarLink:/work/RadarLink_Extended/Montagem/RadarLink:ro
+      - ./RadarLink_Extended/Montagem/cidades:/work/RadarLink_Extended/Montagem/cidades:ro
+    entrypoint: ["./RadarLink"]

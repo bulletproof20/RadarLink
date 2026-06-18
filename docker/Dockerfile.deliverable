@@ -1,0 +1,35 @@
+# RadarLink evaluated deliverable — Linux build and interactive runtime.
+# Canonical build root: RadarLink_Extended/Montagem
+
+FROM gcc:14-bookworm AS build
+
+WORKDIR /work/RadarLink_Extended/Montagem
+
+COPY RadarLink_Extended/Montagem/main.c ./
+COPY RadarLink_Extended/Montagem/src ./src/
+
+# Compile all implementation units explicitly (no shell glob in RUN).
+RUN mkdir -p /out \
+    && gcc -std=c99 -Wall -Wextra -I src main.c \
+    src/interface.c \
+    src/process_esp.c \
+    src/process_ficheiro.c \
+    src/process_geral.c \
+    src/process_nef.c \
+    -o /out/RadarLink
+
+FROM debian:bookworm-slim AS runtime
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends bash coreutils \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV TERM=xterm-256color \
+    LANG=C.UTF-8
+
+WORKDIR /work/RadarLink_Extended/Montagem
+
+COPY RadarLink_Extended/Montagem/cidades ./cidades/
+COPY --from=build /out/RadarLink ./RadarLink
+
+ENTRYPOINT ["./RadarLink"]
