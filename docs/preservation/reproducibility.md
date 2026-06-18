@@ -1,12 +1,15 @@
 # Reproducibility
 
-This page describes the **preservation intent** for RadarLink and how the repository keeps builds and documentation reproducible. For a quick start, see the [repository README](https://github.com/bulletproof20/RadarLink/blob/main/README.md).
+This page describes the **preservation intent** for RadarLink and how the repository keeps builds and documentation reproducible. For a quick start, see the [repository README](https://github.com/bulletproof20/RadarLink/blob/main/README.md) or [How to Run](../guide/how-to-run.md).
+
+For what changed **after** evaluation (documentation and infrastructure only, not application logic), see [Repository Evolution](repository-evolution.md).
 
 ## Principles
 
 1. **Source is canonical** — executables (`.exe`), object files (`.o`), and generated Doxygen HTML are not versioned.
 2. **Edition boundaries are fixed** — rebuild each tree from its own root without cross-copying source.
 3. **Documentation is layered** — MkDocs carries the narrative; Doxygen regenerates API reference on demand.
+4. **Application logic is frozen** — preservation work does not refactor or extend evaluated source.
 
 ## Ignored artifacts
 
@@ -67,3 +70,9 @@ mkdocs serve
 ```
 
 Open the URL printed in the terminal, or open `site/index.html` after `docs-build`.
+
+## Published API reference
+
+!!! tip "Doxygen on GitHub Pages"
+    - [Checkpoint API](/api/checkpoint/html/index.html)
+    - [Deliverable API](/api/deliverable/html/index.html)

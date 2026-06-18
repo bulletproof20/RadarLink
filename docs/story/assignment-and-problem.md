@@ -1,6 +1,11 @@
 # Assignment and Problem
 
-The starting point for RadarLink is the **EAD practical assignment** (`Enunciado.docx.pdf`), preserved in both edition folders at the repository root of each tree.
+The starting point for RadarLink is the **EAD practical assignment** — the faculty *enunciado* preserved in the repository and on this site.
+
+!!! info "Enunciado original"
+    [Open assignment PDF (Enunciado.docx.pdf)](../assets/Enunciado.docx.pdf)
+
+The same file exists at `Academic_Edition/Enunciado.docx.pdf` and `RadarLink_Extended/Enunciado.docx.pdf`.
 
 ## Problem domain
 
@@ -24,9 +29,16 @@ At the **Academic Edition** checkpoint, the emphasis was on correct data structu
 
 Test cities live under `Academic_Edition/cidades/` and `RadarLink_Extended/Montagem/cidades/` (seven files each, including edge-case names such as `cidade#.txt` and `cidade-.txt`).
 
+## Technical reference
+
+For automatically generated API documentation:
+
+!!! tip "Doxygen API"
+    - [**Checkpoint API →**](/api/checkpoint/html/index.html) — `Academic_Edition/`
+    - [**Deliverable API →**](/api/deliverable/html/index.html) — `RadarLink_Extended/Montagem/`
+
 ## Where to look next
 
-- [Checkpoint (Academic Edition)](checkpoint-academic-edition.md) — what was frozen as the evaluated submission.
-- [Deliverable (RadarLink Extended)](deliverable-radarlink-extended.md) — the integrated deliverable milestone in the project timeline.
-
-The assignment PDF itself is **not duplicated in this site**; open `Enunciado.docx.pdf` in either edition folder for the authoritative wording from the faculty.
+- [Academic Context](academic-context.md) — unit, institution, and motivation.
+- [Checkpoint (Academic Edition)](checkpoint-academic-edition.md) — evaluated checkpoint submission.
+- [Deliverable (RadarLink Extended)](deliverable-radarlink-extended.md) — integrated deliverable milestone.

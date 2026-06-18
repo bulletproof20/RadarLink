@@ -1,10 +1,21 @@
-# From Checkpoint to Deliverable
+# Checkpoint vs Deliverable
 
-The repository preserves **two moments of the same academic project**, not two independent codebases.
+The repository preserves **two moments of the same academic project**, not two independent codebases or version lines.
 
 ```text
 Enunciado → problem analysis → Academic_Edition → RadarLink_Extended → evaluation → preservation & publication
 ```
+
+## Conceptual difference
+
+| | **Academic Edition (checkpoint)** | **RadarLink Extended (deliverable)** |
+|---|-----------------------------------|--------------------------------------|
+| **Question it answers** | What was evaluated at the intermediate checkpoint stage? | What was evaluated as the integrated final hand-in? |
+| **Folder** | `Academic_Edition/` | `RadarLink_Extended/Montagem/` |
+| **Scope** | Graph model, traversals, paths, intersections — no runtime matrix editing, no `process_nef` | Both assignment parts merged; matrix editing; *efeitos nefastos* (NEF) |
+| **Relationship** | Archived moment on the timeline | Extends checkpoint architecture; does not replace the archive |
+
+This is **evolution along one project timeline**, not “v1 vs v2” or “legacy vs current product”.
 
 ## Same project, different moments
 
@@ -12,7 +23,7 @@ Enunciado → problem analysis → Academic_Edition → RadarLink_Extended → e
 |--------|--------|---------------------|
 | Checkpoint | `Academic_Edition/` | What was evaluated as the checkpoint submission at that stage of the project? |
 | Deliverable | `RadarLink_Extended/Montagem/` | What was evaluated as the integrated deliverable? |
-| Preservation | `docs/`, Docker, GitHub Pages | How is the story kept reproducible and public? |
+| Preservation | `docs/`, Docker, GitHub Pages | How is the story kept reproducible and public **without changing application logic**? |
 
 ## Technical lineage
 
@@ -36,8 +47,15 @@ The extended deliverable **copies and extends** the checkpoint architecture:
 | Narrative (this site) | MkDocs | Story, preservation, project timeline |
 | API reference | Doxygen (linked under `/api/…/html/`) | Function and struct-level detail per edition |
 
-Use the **Reference** section in the navigation bar for published checkpoint and deliverable API indexes.
+!!! tip "Technical documentation (Doxygen)"
+    - [**Checkpoint API →**](/api/checkpoint/html/index.html)
+    - [**Deliverable API →**](/api/deliverable/html/index.html)
 
-## PDF copies
+    [API Overview](../reference/index.md)
 
-`Enunciado.docx.pdf` exists at both edition roots with **identical content** (same SHA-256). Both are kept intentionally; consolidation is optional and not required for correctness.
+## Assignment document
+
+!!! info "Enunciado original"
+    [Open assignment PDF (Enunciado.docx.pdf)](../assets/Enunciado.docx.pdf)
+
+Identical copies exist at both edition roots in the repository (same SHA-256).
